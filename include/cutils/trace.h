@@ -18,7 +18,13 @@
 #define _LIBS_CUTILS_TRACE_H
 
 #include <inttypes.h>
-#include <stdatomic.h>
+#ifndef __cplusplus
+# include <stdatomic.h>
+#else
+# include <atomic>
+# define _Atomic(X) std::atomic< X >
+using std::atomic_int;
+#endif
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>

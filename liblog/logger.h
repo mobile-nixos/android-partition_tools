@@ -16,7 +16,14 @@
 
 #pragma once
 
-#include <stdatomic.h>
+#ifndef __cplusplus
+# include <stdatomic.h>
+#else
+# include <atomic>
+# define _Atomic(X) std::atomic< X >
+using std::atomic_int;
+#endif
+
 #include <sys/cdefs.h>
 
 #include <log/log.h>

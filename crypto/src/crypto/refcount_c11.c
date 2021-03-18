@@ -19,7 +19,13 @@
 
 #include <assert.h>
 #include <stdalign.h>
-#include <stdatomic.h>
+#ifndef __cplusplus
+# include <stdatomic.h>
+#else
+# include <atomic>
+# define _Atomic(X) std::atomic< X >
+using std::atomic_int;
+#endif
 #include <stdlib.h>
 
 #include <openssl/type_check.h>

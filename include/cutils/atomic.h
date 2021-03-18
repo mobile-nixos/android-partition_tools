@@ -19,7 +19,13 @@
 
 #include <stdint.h>
 #include <sys/types.h>
-#include <stdatomic.h>
+#ifndef __cplusplus
+# include <stdatomic.h>
+#else
+# include <atomic>
+# define _Atomic(X) std::atomic< X >
+using std::atomic_int;
+#endif
 
 #ifndef ANDROID_ATOMIC_INLINE
 #define ANDROID_ATOMIC_INLINE static inline

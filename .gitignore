@@ -1,7 +1,10 @@
 *.img
+*.tmp
 *.o
 *.a
+*.so
 lpdump
 lpmake
 lpunpack
 lpadd
+result
