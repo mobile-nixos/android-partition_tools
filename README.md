@@ -1,9 +1,5 @@
 # lpunpack and lpmake
 
-x86 or x86_64:
-sudo apt install clang zlib1g-dev
-./make.sh
+`nix-build`
 
-arm or arm64:
-sudo apt install clang
-./make.sh
+Will produce working binaries for `x86_64-linux` and `aarch64-linux` with native builds.
