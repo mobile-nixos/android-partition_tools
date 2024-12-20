@@ -28,6 +28,7 @@
 #endif
 
 #include <atomic>
+#include <mutex>
 #include <shared_mutex>
 
 #include <android-base/errno_restorer.h>
