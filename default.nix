@@ -42,5 +42,5 @@ pkgs.callPackage (
   }
 )
 {
-  stdenv = with pkgs; overrideCC stdenv buildPackages.clang_11;
+  stdenv = with pkgs; overrideCC stdenv buildPackages.clang;
 }
